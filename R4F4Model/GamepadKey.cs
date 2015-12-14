@@ -4,7 +4,7 @@ namespace R4F4.Model
 {
     public enum GamepadKey : ushort
     {
-        [Description("INVALID")]
+        [Description("_INVALID")]
         INVALID = 0x00,
         [Description("Up")]
         UP = 0x0001,
@@ -42,9 +42,9 @@ namespace R4F4.Model
         X = 0x4000,
         [Description("Y")]
         Y = 0x8000,
-        [Description("Unbound")]
+        [Description("_Unbound")]
         UNBOUND = 0XFF,
-        [Description("Unbound")]
+        [Description("_Unbound")]
         UNBOUND2 = 0xFFFF,
     }
 }

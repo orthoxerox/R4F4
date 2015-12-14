@@ -18,9 +18,9 @@ namespace R4F4.Model
         WHEEL_DOWN = 0x900,
         [Description("Mouse Look")]
         MLOOK = 0xA00,
-        [Description("Unbound")]
+        [Description("_Unbound")]
         UNBOUND = 0XFF,
-        [Description("INVALID")]
+        [Description("_INVALID")]
         INVALID = 0xFFFF,
     }
 }

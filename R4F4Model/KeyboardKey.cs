@@ -4,7 +4,7 @@ namespace R4F4.Model
 {
     public enum KeyboardKey : byte
     {
-        [Description("INVALID")]
+        [Description("_INVALID")]
         INVALID = 0x00,
         [Description("LMB")]
         LBUTTON = 0x01,
@@ -346,7 +346,7 @@ namespace R4F4.Model
         PA1 = 0xFD,
         [Description("Clear")]
         OEM_CLEAR = 0xFE,
-        [Description("Unbound")]
+        [Description("_Unbound")]
         UNBOUND = 0xFF,
     }
 }
