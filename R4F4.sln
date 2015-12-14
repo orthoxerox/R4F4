@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R4F4", "R4F4\R4F4.csproj", "{A50F25E8-159A-4CDA-AC10-B3F0D2FD9F37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R4F4Model", "R4F4Model\R4F4Model.csproj", "{F3F84AC7-5540-4523-9B01-95943AC9EA8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A50F25E8-159A-4CDA-AC10-B3F0D2FD9F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50F25E8-159A-4CDA-AC10-B3F0D2FD9F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50F25E8-159A-4CDA-AC10-B3F0D2FD9F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50F25E8-159A-4CDA-AC10-B3F0D2FD9F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F84AC7-5540-4523-9B01-95943AC9EA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F84AC7-5540-4523-9B01-95943AC9EA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F84AC7-5540-4523-9B01-95943AC9EA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F84AC7-5540-4523-9B01-95943AC9EA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
