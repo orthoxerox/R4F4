@@ -51,7 +51,7 @@ namespace R4F4.Model
                 var mode = elements.GetC(7) ?? "";
 
                 bindings.Add(new Binding(
-                    "Group " + i, 
+                    "Group " + i.ToString("D2"), 
                     action, 
                     keyboard, mouse, gamepad,
                     kbon, mson, gpon,

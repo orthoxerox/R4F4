@@ -19,6 +19,7 @@ namespace R4F4
         string falloutPath;
         bool edited = false;
         ControlScheme scheme;
+        frmPicker picker;
 
         public bool Edited
         {
@@ -37,6 +38,41 @@ namespace R4F4
         public frmMain()
         {
             InitializeComponent();
+
+            picker = new frmPicker();
+
+            colKeyboard.AspectGetter = (x) => x;
+            colKeyboard.AspectToStringConverter = (x) =>
+            {
+                var binding = (Model.Binding)x;
+                if (binding.KeyboardBinding == null) {
+                    return GetDescriptions(binding.KeyboardKeys);
+                } else {
+                    return "!" + binding.KeyboardBinding.Action;
+                }
+            };
+
+            colMouse.AspectGetter = (x) => x;
+            colMouse.AspectToStringConverter = (x) =>
+            {
+                var binding = (Model.Binding)x;
+                if (binding.MouseBinding == null) {
+                    return GetDescriptions(binding.MouseKeys);
+                } else {
+                    return "!" + binding.MouseBinding.Action;
+                }
+            };
+
+            olvBindings.ButtonClick += (sender, e) =>
+            {
+                var binding = (Model.Binding)e.Model;
+                if (e.Column == colKeyboard) {
+                    if (binding.KeyboardKeys.Count == 1) {
+                        binding.KeyboardKeys[0] = ReadKey();
+                    }
+                }
+                olvBindings.RefreshObject(e.Model);
+            };
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -109,7 +145,7 @@ All Rights Reserved.",
 
         private void PopulateGrid()
         {
-            throw new NotImplementedException();
+            olvBindings.SetObjects(scheme.Bindings);
         }
 
         private void miExit_Click(object sender, EventArgs e)
@@ -148,6 +184,22 @@ All Rights Reserved.",
                     return;
             }
 
+        }
+
+        private string GetDescriptions(IEnumerable<KeyboardKey> enums)
+        {
+            return enums.Cast<Enum>().Select(Helpers.GetDescription).Concatenate();
+        }
+
+        private string GetDescriptions(IEnumerable<MouseKey> enums)
+        {
+            return enums.Cast<Enum>().Select(Helpers.GetDescription).Concatenate();
+        }
+
+        private KeyboardKey ReadKey()
+        {
+            picker.ShowDialog();
+            return picker.Key;
         }
     }
 }

@@ -38,7 +38,13 @@
             this.dlgSave = new System.Windows.Forms.SaveFileDialog();
             this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
             this.dlgFolder = new System.Windows.Forms.FolderBrowserDialog();
+            this.olvBindings = new BrightIdeasSoftware.ObjectListView();
+            this.colGroup = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.colAction = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.colKeyboard = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.colMouse = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.mnuMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.olvBindings)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -121,11 +127,66 @@
             this.dlgFolder.SelectedPath = "C:\\Program Files";
             this.dlgFolder.ShowNewFolderButton = false;
             // 
+            // olvBindings
+            // 
+            this.olvBindings.AllColumns.Add(this.colGroup);
+            this.olvBindings.AllColumns.Add(this.colAction);
+            this.olvBindings.AllColumns.Add(this.colKeyboard);
+            this.olvBindings.AllColumns.Add(this.colMouse);
+            this.olvBindings.CellEditUseWholeCell = false;
+            this.olvBindings.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colGroup,
+            this.colAction,
+            this.colKeyboard,
+            this.colMouse});
+            this.olvBindings.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olvBindings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.olvBindings.HighlightBackgroundColor = System.Drawing.Color.Empty;
+            this.olvBindings.HighlightForegroundColor = System.Drawing.Color.Empty;
+            this.olvBindings.Location = new System.Drawing.Point(0, 24);
+            this.olvBindings.Name = "olvBindings";
+            this.olvBindings.RowHeight = 32;
+            this.olvBindings.Size = new System.Drawing.Size(912, 631);
+            this.olvBindings.TabIndex = 1;
+            this.olvBindings.UseCompatibleStateImageBehavior = false;
+            this.olvBindings.View = System.Windows.Forms.View.Details;
+            // 
+            // colGroup
+            // 
+            this.colGroup.AspectName = "Group";
+            this.colGroup.IsEditable = false;
+            this.colGroup.IsVisible = false;
+            this.colGroup.Text = "Group";
+            // 
+            // colAction
+            // 
+            this.colAction.AspectName = "Action";
+            this.colAction.Groupable = false;
+            this.colAction.Sortable = false;
+            this.colAction.Text = "Action";
+            this.colAction.Width = 120;
+            // 
+            // colKeyboard
+            // 
+            this.colKeyboard.AspectName = "";
+            this.colKeyboard.Groupable = false;
+            this.colKeyboard.IsButton = true;
+            this.colKeyboard.Sortable = false;
+            this.colKeyboard.Text = "Keyboard";
+            this.colKeyboard.Width = 120;
+            // 
+            // colMouse
+            // 
+            this.colMouse.Sortable = false;
+            this.colMouse.Text = "Mouse";
+            this.colMouse.Width = 120;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 655);
+            this.Controls.Add(this.olvBindings);
             this.Controls.Add(this.mnuMain);
             this.MainMenuStrip = this.mnuMain;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -134,6 +195,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.olvBindings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +214,11 @@
         private System.Windows.Forms.SaveFileDialog dlgSave;
         private System.Windows.Forms.OpenFileDialog dlgOpen;
         private System.Windows.Forms.FolderBrowserDialog dlgFolder;
+        private BrightIdeasSoftware.ObjectListView olvBindings;
+        private BrightIdeasSoftware.OLVColumn colGroup;
+        private BrightIdeasSoftware.OLVColumn colAction;
+        private BrightIdeasSoftware.OLVColumn colKeyboard;
+        private BrightIdeasSoftware.OLVColumn colMouse;
     }
 }
 
