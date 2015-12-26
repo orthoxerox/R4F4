@@ -37,30 +37,34 @@
             this.lblHelp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelp.Location = new System.Drawing.Point(0, 0);
+            this.lblHelp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHelp.Name = "lblHelp";
-            this.lblHelp.Size = new System.Drawing.Size(178, 102);
+            this.lblHelp.Size = new System.Drawing.Size(494, 272);
             this.lblHelp.TabIndex = 0;
             this.lblHelp.Text = "Press a key...";
             this.lblHelp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cmdUnbind
             // 
-            this.cmdUnbind.Location = new System.Drawing.Point(50, 67);
+            this.cmdUnbind.Location = new System.Drawing.Point(183, 191);
             this.cmdUnbind.Name = "cmdUnbind";
-            this.cmdUnbind.Size = new System.Drawing.Size(75, 23);
-            this.cmdUnbind.TabIndex = 1;
+            this.cmdUnbind.Size = new System.Drawing.Size(116, 53);
+            this.cmdUnbind.TabIndex = 2;
+            this.cmdUnbind.TabStop = false;
             this.cmdUnbind.Text = "Unbind";
-            this.cmdUnbind.UseVisualStyleBackColor = true;
+            this.cmdUnbind.UseVisualStyleBackColor = false;
             this.cmdUnbind.Click += new System.EventHandler(this.cmdUnbind_Click);
             // 
             // frmPicker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(178, 102);
+            this.ClientSize = new System.Drawing.Size(494, 272);
             this.Controls.Add(this.cmdUnbind);
             this.Controls.Add(this.lblHelp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPicker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPicker";

@@ -66,6 +66,11 @@ namespace R4F4
             Key = KeyboardKey.UNBOUND;
             DialogResult = DialogResult.OK;
         }
+
+        internal void SetPrompt(string prompt)
+        {
+            lblHelp.Text = "Press a key for " + prompt;
+        }
     }
 
 }

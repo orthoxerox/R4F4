@@ -68,7 +68,12 @@ namespace R4F4
                 var binding = (Model.Binding)e.Model;
                 if (e.Column == colKeyboard) {
                     if (binding.KeyboardKeys.Count == 1) {
-                        binding.KeyboardKeys[0] = ReadKey();
+                        binding.KeyboardKeys[0] = ReadKey(binding.Action);
+                    } else if (binding.KeyboardKeys.Count > 1) {
+                        for (int i = 0; i < binding.KeyboardKeys.Count; i++) {
+                            binding.KeyboardKeys[i] = 
+                            ReadKey($"{binding.Action} ({i+1} of {binding.KeyboardKeys.Count})");
+                        }
                     }
                 }
                 olvBindings.RefreshObject(e.Model);
@@ -196,8 +201,9 @@ All Rights Reserved.",
             return enums.Cast<Enum>().Select(Helpers.GetDescription).Concatenate();
         }
 
-        private KeyboardKey ReadKey()
+        private KeyboardKey ReadKey(string prompt)
         {
+            picker.SetPrompt(prompt);
             picker.ShowDialog();
             return picker.Key;
         }
